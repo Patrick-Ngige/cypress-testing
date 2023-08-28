@@ -23,4 +23,7 @@ export class TodoPage{
     showAllTodos() {
         cy.contains('All').click()   
     }
+    clearCompleted() {
+        cy.contains('Clear completed').click()    
+    }
 }
