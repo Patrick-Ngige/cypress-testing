@@ -7,5 +7,5 @@ it('should be able to add a new todo to the list', () => {
 
     cy.get('.toggle').click()
 
-    cy.contains('Clear completed')
+    cy.contains('Clear completed').click()
 })
