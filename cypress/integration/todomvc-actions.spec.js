@@ -8,11 +8,11 @@ describe('todo actions', () => {
 beforeEach(() => {
     todoPage.navigate()
 
-    cy.get('.new-todo', {timeout: 6000}).type("Clean room{enter}")
+    todoPage.addTodo('Clean room')
 })
 
 it('Should add a new todo to the list', () => {
-    cy.get('label').should('have.text', 'Clean room')
+    todoPage.validateTodoTxt(0, 'Clean room')
     cy.get('.toggle').should('not.be.checked')
 })
 
