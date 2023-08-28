@@ -14,5 +14,7 @@ export class TodoPage{
     toggleTodo(todoIndex) {
         cy.get(`.todo-list li:nth-child(${todoIndex + 1}) .toggle`).click()
     }
-    
+    showOnlyCompletedTodos() {
+        cy.contains('Completed').click()
+    }
 }
