@@ -34,5 +34,8 @@ export class TodoPage{
 
         I.should(`${shouldBeCompleted ? '' : 'not.'}have.css`, 'text-decoration-line', 'line-through')
     }
+    validateTodoText(todoIndex, expectedText) {
+        cy.get(`.todo-list li:nth-child(${todoIndex + 1}) label`).should('have.text', expectedText)
+    }
 
 }
