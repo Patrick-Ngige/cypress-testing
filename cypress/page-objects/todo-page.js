@@ -17,4 +17,8 @@ export class TodoPage{
     showOnlyCompletedTodos() {
         cy.contains('Completed').click()
     }
+    showOnlyActiveTodos() {
+        cy.contains('Active').click()
+        
+    }
 }
