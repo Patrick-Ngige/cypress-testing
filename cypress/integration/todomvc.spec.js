@@ -1,5 +1,7 @@
 /// <reference types="cypress" />
 
+describe('todo actions', () => {
+
 it('Should add a new todo to the list', () => {
     cy.visit('http://todomvc-app-for-testing.surge.sh')
 
@@ -18,4 +20,6 @@ it('Should clear completed todos', () => {
     cy.contains('Clear completed').click()
 
     cy.get('.todo-list').should('not.have.descendants', 'li')
+})
+
 })
