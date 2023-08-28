@@ -7,5 +7,7 @@ describe('visual validation', () => {
     it('should look good', () => {
         todoPage.addTodo('Using Cypress')
         todoPage.addTodo('Using Applitools')
+
+        todoPage.toggleTodo(0)
     })
 })
