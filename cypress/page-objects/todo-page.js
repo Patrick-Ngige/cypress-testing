@@ -29,4 +29,10 @@ export class TodoPage{
     validateNumberofTodosShown(expectedNumberOfTodos) {
         cy.get('.todo-list li').should('have.length', expectedNumberOfTodos)
     }
+    validateTodoCompletedState(todoIndex, shouldBeCompleted) {
+        const I = cy.get(`.todo-list li:nth-child(${todoIndex + 1}) label`)
+
+        I.should(`${shouldBeCompleted ? '' : 'not.'}have.css`, 'text-decoration-line', 'line-through')
+    }
+
 }
