@@ -4,6 +4,7 @@ describe('todo actions', () => {
 
 beforeEach(() => {
     cy.visit('http://todomvc-app-for-testing.surge.sh')
+
     cy.get('.new-todo', {timeout: 6000}).type("Clean room{enter}")
 })
 
@@ -19,6 +20,7 @@ it('Should mark a todo as completed', () => {
 
 it('Should clear completed todos', () => {
     cy.get('.toggle').click()
+    
     cy.contains('Clear completed').click()
     cy.get('.todo-list').should('not.have.descendants', 'li')
 })
