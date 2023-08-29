@@ -6,6 +6,8 @@ it('Stubbing response', () => {
     .intercept({
       method: 'GET',
       url: '/api/boards'
+    },{
+      fixture: 'threeBoards'
     }).as('boardList')
 
   cy

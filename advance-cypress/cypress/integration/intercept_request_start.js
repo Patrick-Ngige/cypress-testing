@@ -4,7 +4,7 @@ it('Intercept requests', () => {
 
   cy
   .intercept({
-    method: 'GET',
+    method: 'POST',
     url: '/api/boards'
   }).as('createBoard')
 
@@ -20,12 +20,10 @@ it('Intercept requests', () => {
   .type('launching a rocket{enter}')
 
   cy
-  .wait('@boardList')
-  .its('response.statusCode')
-  .should('eq', 200)
-
-  cy
-    .get('[data-cy=board-item]')
-    .should('have.length', 1)
+  .wait('@createBoard')
+  .then( (board) => {
+    expect(board.response.statusCode).to.eq(201)
+    expect(board.request.body.name).to.eq('launching a rocket')
+  })
 
 });
