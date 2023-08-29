@@ -1,13 +1,5 @@
 {
-  "boards": [
-    {
-      "name": "groceries",
-      "user": 0,
-      "id": 12238584024,
-      "starred": false,
-      "created": "2023-08-29"
-    }
-  ],
+  "boards": [],
   "tasks": [],
   "users": [],
   "lists": []
