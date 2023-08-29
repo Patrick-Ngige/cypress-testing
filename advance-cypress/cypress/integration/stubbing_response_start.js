@@ -14,7 +14,15 @@ it('Stubbing response', () => {
     .visit('/')
 
   cy 
-  .get('[data-cy=create-board')
+  .get('[data-cy=create-board]')
   .click()
+
+  cy
+  .get('[data-cy=new-board-input]')
+  .type('new board{enter}')
+
+  cy
+  .get('#errorMessage')
+  .should('be.visible')
 
 });
