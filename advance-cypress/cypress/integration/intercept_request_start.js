@@ -6,10 +6,18 @@ it('Intercept requests', () => {
   .intercept({
     method: 'GET',
     url: '/api/boards'
-  }).as('boardList')
+  }).as('createBoard')
 
   cy
     .visit('/')
+  
+  cy
+  .get('[data-cy=create-board')
+  .click()
+
+  cy
+  .get('[data-cy=new-board-input')
+  .type('launching a rocket{enter}')
 
   cy
   .wait('@boardList')
