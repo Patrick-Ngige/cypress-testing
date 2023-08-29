@@ -8,14 +8,10 @@ it('Installing plugins', () => {
   cy
   .get('[data-cy=task]')
   .eq(0)
-  .as('task2')
+  .click()
 
   cy
-  .get('[data-cy=task]')
-  .eq(1)
-  .as('task1')
-
-  cy
-  .get('@task2')
-  .drag('@task1')
+  .get('.dropzone')
+  .attachFile('logo.png', {subjectType: 'drag-n-drop'})
+  
 });
