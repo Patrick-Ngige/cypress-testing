@@ -5,7 +5,7 @@ describe('visual validation', () => {
     before(() => todoPage.navigate())
 
     beforeEach(() => cy.eyesOpen({appName: 'Cypress Testing', batchName: 'Using Applitools'}))
-    afterEach(() => cy.eyesClose())
+  
 
     it('should look good', () => {
         cy.eyesCheckWindow('empty todo list')
@@ -18,5 +18,10 @@ describe('visual validation', () => {
         todoPage.toggleTodo(0)
 
         cy.eyesCheckWindow('mark as completed')
+
+    })
+
+    afterEach(() => {
+        cy.eyesClose()
     })
 })
