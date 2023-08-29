@@ -17,7 +17,8 @@
       "title": "milk",
       "id": 66449351949,
       "created": "2023-08-29",
-      "deadline": "2023-09-01"
+      "deadline": "2023-09-01",
+      "order": 0
     },
     {
       "boardId": 25744876570,
@@ -47,7 +48,8 @@
       "title": "bread",
       "id": 21706657015,
       "created": "2023-08-29",
-      "deadline": "2023-09-01"
+      "deadline": "2023-09-01",
+      "order": 1
     }
   ],
   "users": [],

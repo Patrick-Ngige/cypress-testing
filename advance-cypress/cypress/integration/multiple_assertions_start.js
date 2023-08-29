@@ -10,7 +10,7 @@ it('Multiple assertions', () => {
 
   cy
     .get('[data-cy=task]')
-    .then( item => {
+    .should( item => {
       expect(item[0]).to.contain.text('milk')
       expect(item[1]).to.contain.text('bread')
     })
