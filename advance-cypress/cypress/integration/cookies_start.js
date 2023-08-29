@@ -1,11 +1,11 @@
 /// <reference types="cypress" />
 
 
-
 describe('Cookies', () => {
-
+  
   beforeEach(() => {
-
+    
+    Cypress.Cookies.preserveOnce('trello_token')
     cy
       .visit('/')
 
