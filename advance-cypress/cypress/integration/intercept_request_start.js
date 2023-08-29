@@ -12,7 +12,12 @@ it('Intercept requests', () => {
     .visit('/')
 
   cy
+  .wait('@boardList')
+  .its('response.statusCode')
+  .should('eq', 200)
+
+  cy
     .get('[data-cy=board-item]')
-    .should('have.length', 0)
+    .should('have.length', 1)
 
 });

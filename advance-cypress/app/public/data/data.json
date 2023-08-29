@@ -1,13 +1,5 @@
 {
-  "boards": [
-    {
-      "name": "board created by .request() command",
-      "user": 0,
-      "id": 45513008850,
-      "starred": false,
-      "created": "2023-08-29"
-    }
-  ],
+  "boards": [],
   "tasks": [],
   "users": [],
   "lists": []
