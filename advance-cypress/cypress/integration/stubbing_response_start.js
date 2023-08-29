@@ -4,11 +4,11 @@ it('Stubbing response', () => {
 
   cy
     .intercept({
-      method: 'GET',
+      method: 'POST',
       url: '/api/boards'
     },{
-      fixture: 'threeBoards'
-    }).as('boardList')
+      forceNetworkError: 'true'
+    }).as('createBoard')
 
   cy
     .visit('/')
