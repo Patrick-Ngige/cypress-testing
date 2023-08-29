@@ -1,5 +1,7 @@
 /// <reference types="cypress" />
 
+
+
 describe('Cookies', () => {
 
   beforeEach(() => {
@@ -9,23 +11,12 @@ describe('Cookies', () => {
 
   })
 
-  it.only('test #1', () => {
+  it('test #1', () => {
 
     cy
-      .get('[data-cy="login-menu"]')
-      .click();
+    .setCookie('trello_token', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZpbGlwQGV4YW1wbGUuY29tIiwiaWF0IjoxNjE1OTg5MTkyLCJleHAiOjE2MTU5OTI3OTIsInN1YiI6IjIifQ.c3HqS_RRCJp4IPYvwbUkxWPwBx4VXJa_0ArzKq7qx_M')
 
-    cy
-      .get('[data-cy="login-email"]')
-      .type('filip@example.com');
-
-    cy
-      .get('[data-cy="login-password"]')
-      .type('Asdf.1234#');
-
-    cy
-      .get('[data-cy="login"]')
-      .click();
+    cy.reload()
 
     });
 
