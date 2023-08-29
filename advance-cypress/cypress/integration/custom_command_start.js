@@ -1,7 +1,13 @@
 /// <reference types="cypress" />
 
-Cypress.Commands.add('take', {prevSubject: true}, (input) => {
+Cypress.Commands.add('take', {prevSubject: 'optional'}, (subject, input) => {
   
+  if (subject) {
+    cy
+    .wrap(subject)
+    .find(`[data-cy=${input}]`)
+  }
+
   cy
   .get(`[data-cy=${input}]`)
 })
