@@ -3,7 +3,7 @@
 it('Installing plugins', () => {
 
   cy
-    .visit('/board/77787127477');
+    .visit('board/20028236889');
 
   cy
   .get('[data-cy=task]')
