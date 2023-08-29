@@ -13,4 +13,8 @@ it('Stubbing response', () => {
   cy
     .visit('/')
 
+  cy 
+  .get('[data-cy=create-board')
+  .click()
+
 });
